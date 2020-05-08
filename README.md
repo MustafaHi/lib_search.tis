@@ -1,3 +1,5 @@
+# lib_search.tis v1.1
+
 Sciter component for adding search/highlight feature to your HTML page.
 
 [See the blog post for more information](http://misoftware.com.br/Home/Post/Search-text-UI)

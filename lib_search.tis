@@ -1,4 +1,7 @@
-﻿// Find search target: first element with .search_target class
+﻿// lib_search.tis v1.1
+// https://github.com/MustafaHi/lib_search.tis
+
+// Find search target: first element with .search_target class
 var el_search_target = $(.search_target);
 assert(el_search_target);
 
@@ -106,7 +109,7 @@ function SearchSeek(next)
 	
 	if(LibSearchInternal.arr_marks.length)
 	{
-		Selection.clearMark(LibSearchInternal.arr_marks[LibSearchInternal.actual_mark_idx][0], LibSearchInternal.arr_marks[LibSearchInternal.actual_mark_idx][1], undefined);
+		Selection.clearMark(LibSearchInternal.arr_marks[LibSearchInternal.actual_mark_idx][0], LibSearchInternal.arr_marks[LibSearchInternal.actual_mark_idx][1], "omni-hiactual");
 		Selection.applyMark(LibSearchInternal.arr_marks[LibSearchInternal.actual_mark_idx][0], LibSearchInternal.arr_marks[LibSearchInternal.actual_mark_idx][1], "omni-hilite");
 
 		if(next)
@@ -182,11 +185,11 @@ namespace LibSearchInternal
 		if(arr_marks)
 		{
 			for(var v in arr_marks)
-				Selection.clearMark(v[0], v[1], undefined);
+				Selection.clearMark(v[0], v[1], "omni-hilite");
 		}
 
 		// optionally use the method bellow, but it is slow, be aware
-		//Selection.clearMark(self.firstCaretPos, self.lastCaretPos, undefined);
+		//Selection.clearMark(self.firstCaretPos, self.lastCaretPos, "omni-hilite");
 
 		arr_marks = [];
 	}
