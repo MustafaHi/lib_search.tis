@@ -1,4 +1,4 @@
-# lib_search.tis v1.1
+# lib_search.tis v1.2
 
 Sciter component for adding search/highlight feature to your HTML page.
 

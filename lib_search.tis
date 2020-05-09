@@ -184,8 +184,10 @@ namespace LibSearchInternal
 		//this method is faster but have problem with <frames>
 		if(arr_marks)
 		{
-			for(var v in arr_marks)
+			for(var v in arr_marks) {
 				Selection.clearMark(v[0], v[1], "omni-hilite");
+				Selection.clearMark(v[0], v[1], "omni-hiactual");
+			}
 		}
 
 		// optionally use the method bellow, but it is slow, be aware
